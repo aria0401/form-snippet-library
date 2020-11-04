@@ -9,9 +9,303 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.min.js"></script>
+   <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Form Snippet Library</h1>
+    <main> 
+      <div class="library"> 
+<h1>Form Elements</h1>
+
+
+<section id="form_a" class="section"> 
+  <div class="col col_form">
+    <form method="post">
+      <label for="name">Name</label>
+      <br>
+      <input type="text" id="name">
+      <br>
+      <button class="button" type="button">Submit</button>
+    </form>
+  </div>
+  <div class="col col_text">
+    <article>
+      <h3>Form</h3> 
+      <p> The "form" tag wraps around all the form elements.
+        "action" points to where the data should be submitted.</p>
+    </article>
+    <article>
+      <h3>button</h3>
+      <p>The button element represents a clickable button, used to submit forms or anywhere in a document for accessible, standard button functionality.</p>
+    </article>
+
+  </div>
+</section>
+
+<section id="label_a" class="section"> 
+  <div class="col col_form">
+    <fieldset>
+      <legend>Which cheeses would you like?</legend>
+      <label for="blue">Blue</label>
+      <input type="checkbox" name="cheese" id="blue">
+      <label for="parmesan">Parmesan</label>
+      <input type="checkbox" name="cheese" id="parmesan">
+      <label for="gouda">Gouda</label>
+      <input type="checkbox" name="cheese" id="gouda">
+
+    </fieldset>
+   
+  </div>
+  <div class="col col_text">
+    <article>
+      <h3>Input</h3>
+      <p>The input element is used to create interactive controls for web-based 
+        forms in order to accept data from the user.</p>
+    </article>
+    <article>
+      <h3>Label</h3>
+      <p>The "label" element adds a name to any field. 
+        Every field must have a label.</p>
+    </article>
+   
+  </div>
+</section>
+
+
+<section id="textarea_a" class="section"> 
+  <div class="col col_form">
+    <label for="comment">Leave a comment</label>
+    <br>
+  <textarea rows="5" cols="20" name="comment" id="comment"></textarea>
+  </div>
+  <div class="col col_text">
+    <h3>Textarea</h3>
+    <p>the "textarea" element
+    adds a large, multi-line text field.
+    Must always have an id to associate a label.</p>
+  </div>
+</section>
+
+<section id="select_a" class="section"> 
+  <label for="slect">Select an option</label>
+  <br>
+  <div class="col col_form">
+    <select name="rental-option" id="select">
+      <option value="small">Small</option>
+      <option value="family">Family Sedan</option>
+      <option value="lux">Luxury</option>
+     </select>
+  </div>
+  <div class="col col_text">
+    <h3>Select</h3>
+    <p>the "select" element can be used to create a dropdown list. 
+      Must always have an id to associate a label.</p>
+  </div>
+
+</section>
+
+<section id="datalist_a" class="section">  
+  <div class="col col_form"> 
+    <label for="ice-cream-choice">Choose a flavor:</label>
+    <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+    <datalist id="ice-cream-flavors">
+      <option value="Chocolate">
+      <option value="Coconut">
+      <option value="Mint">
+      <option value="Strawberry">
+      <option value="Vanilla">
+    </datalist>
+  </div> 
+  <div class="col col_text">
+    <h3>Datalist</h3> 
+    <p>The "datalist" element contains a set of elements that 
+      represent the permissible or recommended options available 
+      to choose from within other controls.</p>
+  </div>
+  </section>    
+
+<section id="fieldset_a" class="section">
+  <div class="col col_form">
+    <fieldset>
+       <legend>Choose your favorite monster</legend>
+         <input type="radio" id="kraken" name="monster">
+         <label for="kraken">Kraken</label><br/>
+           
+         <input type="radio" id="sasquatch" name="monster">
+         <label for="sasquatch">Sasquatch</label><br/>
+   </fieldset>
+  </div>
+  <div class="col col_text">
+    <h3>Fieldset</h3>
+    <p>The "fieldset" element is used to group elements together, like radio buttons.
+      Must always have a legend.</p>
+      <h3>Legend</h3>
+    <p>The "legend" adds a title to the fieldset.
+      Must be inside a fieldset.</p>
+  </div> 
+</section>
+
+<section id="optgroup_a" class="section"> 
+  <div class="col col_form">
+    <label for="dino-select">Choose a dinosaur:</label>
+    <br>
+    <select id="dino-select">
+      <optgroup label="Theropods">
+        <option>Tyrannosaurus</option>
+        <option>Velociraptor</option>
+        <option>Deinonychus</option>
+      </optgroup>
+      <optgroup label="Sauropods">
+        <option>Diplodocus</option>
+        <option>Saltasaurus</option>
+        <option>Apatosaurus</option>
+    </optgroup>
+    </select>
+  </div>
+  <div class="col col_text">
+    <article>
+      <h3>Optgroup</h3>
+      <p>The element "optgroup" Creates a group of options inside a "select".           
+        label="…" is used as a visible name for the group. </p>
+    </article>
+    <article>
+      <h3>option</h3>
+      <p>Option creates an entry inside select or datalist (with value).
+        Use the selected attribute to set a default value.</p>
+    </article>
+  
+  </div>
+</section>
+
+
+<h2>Input types</h2>
+<section id="text_a" class="section">
+  <div class="col col_form">
+    <label for="name">Name (4 to 8 characters):</label>
+    <br>
+    <input type="text" id="name" name="name" required
+           minlength="4" maxlength="8" size="10">
+  </div>
+  <div class="col col_text">
+    <h3>Text</h3>
+    <p>Single line text field.
+      If you want, you can leave type="text" off the input.</p>
+  </div>
+</section>
+
+<section id="number_a">
+  <div class="col col_form">
+    <label for="tentacles">Number of tentacles (4-10):</label>
+    <br>
+    <input type="number" id="tentacles" name="tentacles"
+       min="4" max="10">
+  </div>
+  <div class="col col_text">
+    <h3>Number</h3>
+    <p>Accepts numbers; has a up/down switch.</p>
+  </div>
+</section>
+
+<section id="email_a">
+  <div class="col col_form">
+    <label for="email">Enter your globex.com email:</label>
+    <br>
+    <input type="email" id="email" pattern=".+@globex.com" size="30" required>
+  </div>
+  <div class="col col_text">
+    <h3>Mail</h3>
+    <p>Elements of type email are used to let the user enter and edit an e-mail address,</p>
+  </div>
+</section>
+
+<section id="radio_a">
+  <div class="col col_form">
+    <p>Select a maintenance drone:</p>
+
+<div>
+  <input type="radio" id="huey" name="drone" value="huey"
+         checked>
+  <label for="huey">Huey</label>
+</div>
+
+<div>
+  <input type="radio" id="dewey" name="drone" value="dewey">
+  <label for="dewey">Dewey</label>
+</div>
+
+<div>
+  <input type="radio" id="louie" name="drone" value="louie">
+  <label for="louie">Louie</label>
+</div>
+  </div>
+  <div class="col col_text">
+    <h3>radio</h3>
+    <p> Only one radio button in a given group can be selected at the same time. It needs a name and a value</p>
+  </div>
+</section>
+
+
+<section id="checkbox_a">
+  <div class="col col_form">
+    <p>Choose your monster's features:</p>
+
+    <div>
+      <input type="checkbox" id="scales" name="scales"
+         checked>
+      <label for="scales">Scales</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="horns" name="horns">
+      <label for="horns">Horns</label>
+    </div>
+  </div>
+  <div class="col col_text">
+    <h3>checkbox</h3>
+    <p>A checkbox allows you to select single values for submission in a form (or not).</p>
+  </div>
+</section>
+</div>  
+
+
+      <div class="sidebar">
+        <h2>Form elements</h2>
+        <ul>
+          <li><a href="#form_a">form</a></li>
+          <li><a href="#form_a">button</a></li>
+          <li><a href="#label_a">input</a></li>
+          <li><a href="#label_a">label</a></li>
+          <li><a href="#textarea_a">textarea</a></li>
+          <li><a href="#select_a">select</a></li>
+          <li><a href="#datalist_a">datalist</a></li>
+          <li><a href="#fieldset_a">fieldset</a></li>
+          <li><a href="#fieldset_a">legend</a></li>
+          <li><a href="#optgroup_a">option</a></li>
+          <li><a href="#optgroup_a">optgroup</a></li>
+        </ul>
+        <h2>Input Types</h2>
+        <ul>
+          <li><a href="#text_a">text</a></li>
+          <li><a href="#number_a">number</a></li>
+          <li><a href="email_a">email</a></li>
+          <li><a href="radio_a">radio</a></li>
+          <li><a href="checkbox_a">checkbox</a></li>
+          <li><a href="">tel</a></li>
+          <li><a href="">date</a></li>
+          <li><a href="">submit</a></li>
+          <li><a href="">color</a></li>
+          <li><a href="">search</a></li>
+          <li><a href="">range</a></li>
+        </ul>
+      </div>
+    </main> 
+
+    <footer>
+  <h4>Resources</h4>
+<a href="https://learn-the-web.algonquindesign.ca/topics/forms-cheat-sheet/">Forms cheat sheet</a>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">MDN Web Forms</a>
+    </footer>
 
     <!-- if you need to show copy-pastable code, you can use the following-->
     <!--<pre><code class="language-html"><input type=""></code></pre>-->
